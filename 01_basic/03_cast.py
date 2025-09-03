@@ -18,5 +18,5 @@ print("conversion de tipos de datos")
 # print(bool(" ")) # convierte cualquier string no vacio a bool = True
 
 
-print (round(2.5))
+print (round(2.5))      # Aproxima al par más cercano
 print (round(3.5))
