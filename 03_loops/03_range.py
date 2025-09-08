@@ -5,28 +5,28 @@
 
 print('\nrange():')
 
-# nums = range(5)     # (5) Va del 0 al 5 porque si no se pone nada como primer valor se asume que es 0
-# print(nums)         # No crea una lista con los numeros del 0 al 5 sino un rango de 0 a 5 para cuando 
-                    # Para cuando se necesite
+nums = range(5)     # (5) Va del 0 al 5 porque si no se pone nada como primer valor se asume que es 0
+print(nums)         # No crea una lista con los numeros del 0 al 5 sino un rango de 0 a 5 para cuando 
+                      # Para cuando se necesite
 
 # Genera una secuencia de números del 0 al 9
-# for num in range(10):
-#     print(num)
+for num in range(10):
+    print(num)
 
 # range(inicio, fin)
-# for num in range(5, 10):
-#     print(num)
+for num in range(5, 10):
+    print(num)
 
 # range(inicio, fin, paso)
-# for num in range(0, 100, 5):
-#     print(num)
+for num in range(0, 100, 5):
+    print(num)
 
-# for num in range(-5, 0):
-#     print(num)
+for num in range(-5, 0):
+    print(num)
 
 # range(10, 0, -1) Cuenta en negativo
-# for num in range(10, 0, -1):
-#     print(num)
+for num in range(10, 0, -1):
+    print(num)
 
 # range no es una lista crea los numeros sobre la marcha
 nums = range(10)
@@ -34,8 +34,8 @@ list_of_noms = list(nums)
 print(list_of_noms)
 
 # uno de range para hacer algo un numero repetido de veces 
-for _ in range(5):
-    print('Hace cinco veces algo')
+# for _ in range(5):
+#     print('Hace cinco veces algo')
 
 ###
 # EJERCICIOS (range)
