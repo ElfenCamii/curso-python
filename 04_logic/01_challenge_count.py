@@ -24,10 +24,14 @@ def check_in_balanced(text):
 
     print(f'count_r: {count_r} count_j: {count_j}')
 
-    if count_r == count_j:
-        return True
-    else:
-        return False
+    # if count_r == count_j:
+    #     return True
+    # else:
+    #     return False
+
+    return count_j == count_r
 
 print(check_in_balanced('RRRJJ'))
 print(check_in_balanced('RRRJJJ'))
+print(check_in_balanced('aopiduf'))
+print(check_in_balanced('aojpidRuf'))
