@@ -15,3 +15,13 @@ Crea una función en Python que reciba una cadena de texto. Esta función debe c
 - En el caso de que no aparezca ninguna de las dos letras en la cadena, se entiende que el equilibrio se mantiene (0 = 0), por lo que la función debe retornar True.
 """
 
+def check_in_balanced(text):
+    text = text.upper()
+
+    # Vamos a contar el número de veces que aparece una letra
+    count_r = text.count('R')   # Encuentra las e
+    count_j = text.count('J')   # Encuentra las j
+
+    print(f'count_r: {count_r} count_j: {count_j}')
+
+check_in_balanced('RRRJJ')
