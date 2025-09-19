@@ -34,3 +34,36 @@ resultado = battle(lista_a, lista_b)  # -> "x"
 # - 4 vs 2+2: empate
 # Resultado: "x"
 """
+
+import os
+os.system('cls')
+
+###
+# Solución propia
+###
+
+lista_a = [2, 4, 2]
+lista_b = [3, 3, 4]
+
+def list_to_dic(list1, list2):
+
+    for i in range(len(list1)):
+        a = lista_a[i]
+        b = lista_b[i]
+        assault = a - b
+        if assault > 0:
+            print(f'"a" Gano!! {assault}')
+            if i + 1 < len(list1):
+                list1[i+1] += assault
+        elif assault == 0:
+            print(f'"a y b" Empataron!! {assault}')
+        else:
+            print(f'"b" Gano!! {assault}')
+            if i + 1 < len(list2):
+                list2[i+1] += abs(assault)
+    return list1, list2, assault
+
+resultado_a, resultado_b, last_value = list_to_dic(lista_a, lista_b)
+
+print(resultado_a, resultado_b)
+print(f'El resultado final de la batalla fue: {abs(last_value)}')
