@@ -6,7 +6,7 @@
 # Soy Camilo
 # Estoy aprendiendo Python
 
-print('hola')
+print('Hola')
 print('Soy Camiilo')
 print('Estoy aprendiendo Python')
 
@@ -46,11 +46,11 @@ print(a % b)
 # Imprime cada resultado
 
 numero = 25
-print(type(str(numero)))
+print(f'El tipo original era {type(numero)}, el valor era {numero} y el nuevo tipo es:{type(str(numero))}')
 texto = '45.76'
-print(type(float(texto)))
+print(f'El tipo original era {type(texto)}, el valor era {texto} y el nuevo tipo es: {type(float(texto))}')
 entero = 10.99
-print(type(int(entero)))
+print(f'El tipo original era {type(entero)}, el valor era {entero} y el nuevo tipo es: {type(int(entero))}')
 
 # 4️⃣ Entrada de datos del usuario
 
@@ -63,7 +63,7 @@ print(type(int(entero)))
 name = input('Dime cual es tu nombre: ')
 age = int(input('Dime cual es tu edad: '))
 
-print(f'Hola{name}, el próximo año tendrás {age + 1} años')
+print(f'Hola {name}, el próximo año tendrás {age + 1} años')
 
 # 5️⃣ Uso de len()
 
