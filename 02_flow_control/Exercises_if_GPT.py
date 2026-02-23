@@ -83,3 +83,121 @@ if password_user == password_real:
     print("Acceso concedido")
 else:
     print("Acceso denegado")
+
+# 6️⃣ Comparación de strings
+
+# Dado:
+# lenguaje = "Python"
+# Verifica si el usuario escribió:
+# "python"
+# "PYTHON"
+# "Python"
+# 👉 sin importar mayúsculas/minúsculas
+
+palabra = 'Python'
+palabra_user = input('Escribe la palabra: ')
+
+if palabra_user == 'python':
+    print('La palabra ingresada fue python')
+elif palabra_user == 'PYTHON':
+    print('La palabra ingresada fue PYTHON')
+elif palabra_user == 'Python':
+    print('La palabra ingresada fue PYTHON')
+else:
+    print('La palabra no tiene nada que ver con Python')
+
+# 7️⃣ Clasificación de notas
+
+# Dado:
+# nota = 3.7
+# Imprime:
+# “Reprobado” (< 3.0)
+# “Aprobado” (3.0 a 4.5)
+# “Excelente” (> 4.5)
+
+nota = float(input('Ingrese la nota del estudiante: '))
+
+if 5 >= nota >= 4.5:
+    print(f'La nota fue {nota}, Excelente, sigue así')
+elif 4.5 > nota >= 3:
+    print(f'La nota fue {nota}, Aporobado, aun puede mejorar')
+elif 3 > nota >= 0:
+    print(f'La nota fue {nota}, Reprobado, a estudiar más')
+else:
+    print(f'La nota {nota}, esta fuera de los rangos de calificación')
+
+# 8️⃣ Verificación múltiple (AND)
+
+# Dado:
+# edad = 25
+# tiene_cedula = True
+# Imprime:
+# “Puede votar” si cumple ambas condiciones
+# “No puede votar” si no
+
+edad = int(input('Escriba su edad:'))
+tiene_id = input('Escriba "si" o "no" si cuenta con cedula: ')
+tiene_id = tiene_id.lower()
+
+if edad >= 18 and tiene_id == 'si':
+    print(f'ya que tenes {edad} años y tienes cedula, puedes votar')
+elif edad >= 18 and tiene_id == 'no':
+    print(f'Aunque tienes {edad} años, al no tener cedula no puedes votar')
+elif edad < 18 and tiene_id == 'si':
+    print('Como tienes {edad} años y tienes cedula, vamos a llamar a la policia por que es ilegal')
+else:
+    print('No puedes votar')
+
+# 9️⃣ Verificación múltiple (OR)
+
+# Dado:
+# tiene_descuento = False
+# es_estudiante = True
+# Imprime:
+# “Aplica descuento” si al menos una es True
+# “No aplica descuento” si ambas son False
+
+tiene_descuento = input('Tiene descuento? (si/no): ').lower() == 'si'
+es_estudiante = input('Es estudiante? (si/no): ').lower() == 'si'
+
+if tiene_descuento or es_estudiante:
+    print('Aplica descuento')
+else:
+    print('No aplica descuento')
+
+# 🔟 Comparación de tres números
+
+# Dado:
+# x = 5
+# y = 9
+# z = 3
+# Determina cuál es el mayor de los tres.
+
+x = int(input('Ingrese un numero entero: '))
+y = int(input('Ingrese un numero entero: '))
+z = int(input('Ingrese un numero entero: '))
+
+if x - y >= 0 and x - z > 0:
+    print(f'El numero mayor es {x}')
+elif x - y >= 0 and x - z < 0:
+    print(f'El numero mayor es {z}')
+elif x - y < 0 and y - z >= 0:
+    print(f'El numero mayor es {y}')
+else:
+    print(f'El numero mayor es {z}')
+
+
+# otra solucion:
+
+x = int(input('Ingrese un numero entero: '))
+y = int(input('Ingrese un numero entero: '))
+z = int(input('Ingrese un numero entero: '))
+
+mayor = x
+
+if y > mayor:
+    mayor = y
+if z > mayor:
+    mayor = z
+
+print(f'El número mayor es {mayor}')
