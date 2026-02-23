@@ -5,7 +5,8 @@
 
 print("conversion de tipos de datos")
 
-# print(2 + int("100")) # convierte el string "100" a int y luego suma 2 + 100 = 5
+# print( 2 + '100') esto genera un error al no poder sumar un entero con un str
+print(2 + int("100")) # convierte el string "100" a int y luego suma 2 + 100 = 102
 # print(str(2) + "3") # convierte el int 2 a string y luego concatena "2" + "3" = "23"
 
 # print(float("3.14")) # convierte el string "3.14" a float = 3.14
