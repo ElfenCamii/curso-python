@@ -201,3 +201,48 @@ if z > mayor:
     mayor = z
 
 print(f'El número mayor es {mayor}')
+
+# 🧩 BONUS (reto extra 🔥)
+
+# Haz un programa que:
+# pida un número
+# diga si es par
+# diga si es positivo
+# diga si es mayor que 100
+# 👉 todo en un solo programa
+
+guess_number = int(input('Ingrese un numero entero, puede ser positivo o negativo: '))
+
+if guess_number >= 100 and guess_number % 2 == 0:
+    print(f'El numero {guess_number} es mayor que 100 y es par')
+elif guess_number >= 100 and guess_number % 2 == 1:
+    print(f'El numero {guess_number} es mayor que 100 y es impar')
+elif guess_number >= 0 and guess_number % 2 == 0:
+    print(f'El numero {guess_number} es positivo y es par')
+elif guess_number >= 0 and guess_number % 2 == 1:
+    print(f'El numero {guess_number} es positivo y es impar')
+elif guess_number <= 0 and guess_number % 2 == 0:
+    print(f'El numero {guess_number} es negativo y es par')
+else:
+    print(f'El numero {guess_number} es negativo y es impar')
+
+### Otra solución
+
+guess_number2 = int(input('Introduce un numero entero, puede ser positivo o negativo '))
+
+if guess_number2 % 2 == 0:
+    print(f'El numero {guess_number2} es par')
+else:
+    print(f'El numero {guess_number2} es impar')
+
+if guess_number2 > 0:
+    print(f'El numero {guess_number2} es positivo')
+elif guess_number2 < 0: 
+    print(f'El numero {guess_number2} es negativo')
+else:
+    print('El numero es 0')
+
+if guess_number2 > 100:
+    print(f'El numero {guess_number2} es mayor que 100')
+else:
+    print('El numero es menor que 100')
