@@ -42,6 +42,7 @@ else:
     print(suma)
 
 # 🟡 Nivel 2 – Control y lógica
+
 # 4️⃣ Contador de positivos y negativos
 
 # Pide 10 números al usuario y muestra:
@@ -97,3 +98,70 @@ except ValueError:
     print('El valor ingresado no es un numero')
 
 print(f'El factorial de {user_number} es {factorial}')
+
+# 🟠 Nivel 3 – Más razonamiento
+
+# 7️⃣ Número mayor
+
+# Pide 7 números y determina cuál es el mayor sin usar max().
+
+import os
+os.system('cls')
+
+print('Numero mayor')
+print('Cualquier intento no valido sera contado igualmente')
+
+mayor = None
+
+for n in range(7):
+    try:
+        user_number = int(input('Escriba un numero: '))
+        if mayor is None or user_number > mayor:
+            mayor = user_number
+    except ValueError:
+        print('El valor ingresado no es un numero entero')
+    
+print('El numero mayor es: ',mayor)
+
+# 8️⃣ Promedio sin listas
+
+# Pide 8 números y calcula el promedio.
+# (No usar listas, solo acumulador y contador).
+
+suma = 0
+contador = 0
+
+for n in range(8):
+    try:
+        user_number = int(input('Escribe un numero: '))
+        suma += user_number
+        contador += 1
+    except ValueError:
+        print('El valor ingresado no es valido')
+
+if contador > 0:
+    print(f'El promedio es {suma / contador}')
+else:
+    print('No se ingresaron numeros validos')
+
+# 9️⃣ Contar divisores
+
+# Pide un número y determina cuántos divisores tiene.
+
+# Ejemplo:
+# 6 → divisores: 1,2,3,6 → total 4
+
+while True:
+    divisores = []
+    
+    try:
+        user_number = int(input('Escribe un numero: '))
+        for n in range(1, (user_number + 1)):
+            if user_number % n == 0:
+                divisores.append(n)
+        print(f'Los numeros divisores de {user_number} son')
+        print(divisores)
+        print('Y el total de divisores es: ', len(divisores))
+        break
+    except ValueError:
+        print('El valor ingresado no es valido')
