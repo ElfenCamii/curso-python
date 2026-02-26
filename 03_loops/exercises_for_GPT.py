@@ -165,3 +165,53 @@ while True:
         break
     except ValueError:
         print('El valor ingresado no es valido')
+
+# 🔴 Nivel 4 – Lógica combinada
+# 🔟 Número primo
+
+# Determina si un número es primo usando for.
+
+# (No usar funciones externas.)
+
+try:
+    user_number = int(input('ingresa un numero: '))
+    contador = 0
+
+    if user_number > 1:
+        for n in range(1, user_number):
+            primo = user_number % n
+            if primo == 0:
+                contador += 1
+            if contador == 2:
+                print('El numero no es primo')
+                print(n)
+                break
+        else:
+            print('El numero es primo')
+            print(n)
+    if user_number <= 1:
+        print('No es un numero primo')
+except ValueError:
+    print('El valor ingresado no es valido')
+
+###
+# Solución de GPT
+
+try:
+    user_number = int(input('Ingresa un numero: '))
+
+    if user_number <= 1:
+        print('No es un numero primo')
+    else:
+        es_primo = True
+        for n in range(2, user_number):
+            if user_number % n == 0:
+                es_primo = False
+                break
+        if es_primo:
+            print('El numero es primo')
+        else:
+            print('El numero no es primo')
+
+except ValueError:
+    print('El valor ingresado no es valido')
