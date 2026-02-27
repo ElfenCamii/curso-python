@@ -90,3 +90,26 @@ try:
     print('El promedio de los numeros es: ', valor_promedio)
 except ValueError:
     print('El valor no es un numero!')
+
+# 🟠 Nivel 3 — Integración con lo que ya sabes
+
+# 6️⃣ Función que cuente pares hasta N
+
+# Debe:
+
+# Recibir un número
+# Contar cuántos pares hay desde 1 hasta ese número
+# Retornar el total
+
+# Usa for dentro de la función.
+
+def contador(a):
+    pares = 0
+    for n in range(1, a + 1):
+        if n % 2 == 0:
+            pares += 1
+    return pares
+    
+user_number = int(input('Ingresee un numero: '))
+n_pares = contador(user_number)
+print(n_pares)
