@@ -29,9 +29,8 @@ def par(a):
     return a % 2 == 0
 
 def bienvenida():
-    return print('Bienveniodo a conteo de pares')
+    print('Bienveniodo a conteo de pares')
 
-numero_pares = 0
 lista = []
 lista_pares = []
 bienvenida()
@@ -43,13 +42,12 @@ while True:
             lista.append(user)
             if par(user):
                 lista_pares.append(user)
-                numero_pares += 1
         except ValueError:
             print('El valor ingresado no es un numero')
     elif add_number == 'no':
         print('La lista completa fue: \n',lista)
         print('La lista de pares fue: \n', lista_pares)
-        print('El total de pares fue: \n', numero_pares)
+        print('El total de pares fue: \n', len(lista_pares))
         break
     else:
         print('Texto ingresado no valido')
