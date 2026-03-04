@@ -77,3 +77,96 @@ else:
     print('LA clave "edad" si existe')
 
 print(estudiante)
+
+# 🟡 🧠 NIVEL MEDIO (recorrer y lógica)
+
+# 4️⃣ Recorrer claves y valores
+
+# Dado:
+
+# notas = {
+#     "matematicas": 4.5,
+#     "fisica": 3.8,
+#     "quimica": 4.2
+# }
+
+# Recorre el diccionario.
+# Imprime cada materia con su nota.
+# Calcula el promedio usando un loop.
+
+notas = {
+    "matematicas": 4.5,
+    "fisica": 3.8,
+    "quimica": 4.2
+}
+
+promedio = 0
+materias = 0
+promedio1 = []
+
+for materia, nota in notas.items():
+    print(f'La materia es {materia} y la nota fue de {nota}')
+    promedio1.append(nota)
+
+print('El promedio de las notas es: \n', round(sum(promedio1)/len(promedio1), 2))
+    
+for n in notas.values():
+    promedio += n
+    materias += 1
+
+print('El promedio de las notas es: \n', round((promedio)/materias, 2))
+
+
+# 5️⃣ Contar ocurrencias
+
+# Pide palabras al usuario hasta que escriba "salir".
+# Guárdalas en un diccionario donde:
+# La clave sea la palabra.
+# El valor sea cuántas veces se repitió.
+# Ejemplo resultado:
+
+# {"hola": 3, "python": 2}
+
+dic_palabras = {}
+list_palabras = []
+valor = 0
+
+while True:
+    palabras = input('\nEscribe una palabra, para terminar el programa escribe "salir": \n').lower()
+    
+    if palabras == 'salir':
+        break
+    list_palabras.append(palabras)
+
+for palabra in list_palabras:
+    if palabra in dic_palabras:
+        dic_palabras[palabra] +=1
+    else:
+        dic_palabras[palabra] = 1
+
+print(dic_palabras)
+
+
+# 6️⃣ Filtrar por condición
+
+# Dado un diccionario de productos con precios:
+
+# Crea un nuevo diccionario solo con los productos que cuesten más de 1000.
+
+productos = {
+    "Laptop": 2500,
+    "Mouse": 80,
+    "Teclado": 150,
+    "Monitor": 1200,
+    "Celular": 1800,
+    "Audifonos": 200,
+    "Tablet": 950,
+    "Impresora": 1100
+}
+
+productos_mas_100 = {}
+
+for producto, precio in productos.items():
+    if precio > 1000:
+        productos_mas_100[producto] = precio
+print(productos_mas_100)
