@@ -170,3 +170,60 @@ for producto, precio in productos.items():
     if precio > 1000:
         productos_mas_100[producto] = precio
 print(productos_mas_100)
+
+# 🔴 🧩 NIVEL DIFÍCIL (estructura mental)
+
+# 7️⃣ Diccionario de listas
+
+# Crea un diccionario donde:
+
+# Cada clave sea un nombre de estudiante.
+# Cada valor sea una lista de 3 notas.
+
+# Luego:
+
+# Calcula el promedio de cada estudiante.
+# Determina cuál tiene el promedio más alto.
+
+# 8️⃣ Diccionario anidado
+
+# Crea un sistema tipo agenda:
+
+# agenda = {
+#     "Camilo": {"telefono": "123", "ciudad": "Bogotá"},
+#     "Ana": {"telefono": "456", "ciudad": "Medellín"}
+# }
+
+# Permite buscar una persona y mostrar sus datos.
+# Maneja el caso donde no exista.
+
+# 9️⃣ Conteo de pares usando diccionario
+
+# Dada una lista de números:
+# Crea un diccionario con:
+
+# "pares": cantidad
+# "impares": cantidad
+
+# Usando tu función par().
+
+
+# 🟣 🔥 RETO (para mañana)
+
+# Sistema de inventario simple:
+
+# Usar un diccionario donde:
+
+# clave → nombre del producto
+# valor → cantidad disponible
+
+# El programa debe:
+
+# Permitir agregar producto.
+# Permitir actualizar cantidad.
+# Mostrar inventario.
+# Eliminar producto.
+
+# Salir.
+
+# Todo usando funciones.
