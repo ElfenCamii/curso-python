@@ -64,3 +64,12 @@ print(persona.items())
 # Para obtener por un lado la llave y por otro el valor
 for key, value in persona.items():
     print(f'\n{key}: {value}')
+
+# Para saber si hay un valor dentro del diccionario sin que salte error
+print(persona.get('casa', 'El valor buscado no existe!'))
+
+# Para saber la longitud de un diccionario
+print(len(persona))
+
+# para limpiar un diccionaro (eliminar los valores)
+persona.clear()
