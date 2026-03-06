@@ -73,3 +73,13 @@ print(len(persona))
 
 # para limpiar un diccionaro (eliminar los valores)
 persona.clear()
+
+# Para eliminar el ultimo elemento del diccionario
+persona.popitem()
+
+# Para copiar un diccionario
+persona_2 = persona.copy()
+
+# Otra forma de copiar un diccionario
+persona_3 = dict(persona)
+
