@@ -83,3 +83,49 @@ persona_2 = persona.copy()
 # Otra forma de copiar un diccionario
 persona_3 = dict(persona)
 
+# Para recorrer diccionarios anidados
+
+mi_familia = {
+    'mama' : {
+      'nombre' : 'Ana',
+      'edad' : 52
+    },
+    'hermana' : {
+        'nombre' : 'Maria',
+        'edad' : 22
+    },
+    'pareja' : {
+        'nombre' : 'Daniella',
+        'edad' : '23'
+    }   
+}
+
+for x, obj in mi_familia.items():
+    print(x)
+    for y in obj:
+        print(y + ':', obj[y]) 
+
+# Para crear un diccionaro en base a otros diccionarios
+
+mama = {
+      'nombre' : 'Ana',
+      'edad' : 52
+    }
+
+hermana = {
+        'nombre' : 'Maria',
+        'edad' : 22
+    }
+
+pareja = {
+        'nombre' : 'Daniella',
+        'edad' : '23'
+    }
+
+mi_familia_2 = {
+    'mama' : mama,
+    'hermana' : hermana,
+    'novia' : pareja
+}
+
+print(mi_familia_2)
