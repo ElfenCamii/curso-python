@@ -20,11 +20,16 @@ tienda = {
     "frutas": {"manzana": 3000, "pera": 2500},
     "verduras": {"zanahoria": 2000, "tomate": 2800}
 }
-list_categoria = []
-list_productos = []
-list_precios = []
+
 
 def productos(a):
+    '''
+    Función que permite mostrar las categorias, los productos y los precios de la tienda de Camiilo
+    '''
+    list_categoria = []
+    list_productos = []
+    list_precios = []
+
     for categoria, stok in a.items():
         list_categoria.append(categoria)
         for producto, precio in stok.items():
@@ -56,8 +61,13 @@ while True:
             print(tienda.get(busqueda_c, 'La categoria buscado no se encuentra en existencia!'))
         elif user == 3:
             busqueda_p = input('Ingrse el producto que quiera buscar: ')
+            encontrado = False
             for b_categoria, b_productos in tienda.items():
-                print(b_productos.get(busqueda_p, 'El producto buscado no se encuentra en existencia!'))
+                if busqueda_p in b_productos:
+                    print(f'el precio de {busqueda_p} es de {b_productos[busqueda_p]}')
+                    encontrado = True
+            if not encontrado:
+                print('El producto buscado no se encuentra en existencia')
         elif user == 4:
             print('gracas por visitarnos\nHasta la proxima')
             break
