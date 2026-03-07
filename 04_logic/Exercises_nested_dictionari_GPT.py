@@ -75,3 +75,49 @@ while True:
             print('Valor asignado no valido')
     except ValueError:
         print('El valor ingresado no es un numero')
+
+
+###
+# Extra para lectura de diccionarios anidados
+###
+
+# Ejercicio rápido
+
+# Con el mismo diccionario tienda imprime:
+
+# Categoria: frutas
+# - manzana: 3000
+# - pera: 2500
+
+# Categoria: verduras
+# - zanahoria: 2000
+# - tomate: 2800
+
+# Usando dos for anidados.
+
+for extra_categorias, extra_productos in tienda.items():
+    print(f'\nCategoria: {extra_categorias}')
+    for extra_producto, extra_precio in extra_productos.items():
+        print(f'- {extra_producto}: {extra_precio}')
+
+# Para cerrar el día te dejo un mini-reto de 3 minutos (muy corto)
+
+# Usando este diccionario:
+
+# tienda = {
+#     "frutas": {"manzana": 3000, "pera": 2500},
+#     "verduras": {"zanahoria": 2000, "tomate": 2800}
+# }
+
+# Haz un programa que imprima solo los productos que valgan más de 2600.
+
+# Salida esperada:
+
+# manzana - 3000
+# tomate - 2800
+
+print('\nProductos con un precio superior a $2600')
+for extra_productos in tienda.values():
+    for extra_producto, extra_precio in extra_productos.items():
+        if extra_precio > 2600:
+            print(f'- {extra_producto}: {extra_precio}')
