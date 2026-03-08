@@ -21,6 +21,42 @@ os.system('cls')
 # 3. Buscar precio de un producto
 # 4. Salir
 
+###
+# Extra de GPT
+###
+
+# 🔥 Siguiente ejercicio (sube un poco el nivel)
+
+# Vamos a expandir tu tienda.
+
+# Agrega una nueva opción al menú:
+
+# 5. Agregar producto
+
+# Debe funcionar así:
+
+# Ingrese categoria: frutas
+# Ingrese nombre del producto: mango
+# Ingrese precio: 3200
+
+# Resultado:
+
+# El producto se agrega al diccionario.
+
+# Después si haces opción 2, debería aparecer:
+
+# manzana - 3000
+# pera - 2500
+# banana - 1800
+# mango - 3200
+
+# 💡 Pistas:
+
+# Necesitarás algo así:
+
+# tienda[categoria][producto] = precio
+
+
 tienda = {
     "frutas": {"manzana": 3000, "pera": 2500, "banana": 1800},
     "verduras": {"zanahoria": 2000, "tomate": 2800, "cebolla": 1500},
