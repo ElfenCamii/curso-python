@@ -121,3 +121,18 @@ for extra_productos in tienda.values():
     for extra_producto, extra_precio in extra_productos.items():
         if extra_precio > 2600:
             print(f'- {extra_producto}: {extra_precio}')
+
+# Te dejo un último mini-reto opcional (nivel 3 minutos)
+
+# Modificar tu código para que imprima también la categoría del producto.
+
+# Salida esperada:
+
+# frutas - manzana: 3000
+# verduras - tomate: 2800
+
+print('\nProductos con un precio superior a $2600 junto con su categoria:')
+for extra_categorias, extra_productos in tienda.items():
+    for extra_producto, extra_precio in extra_productos.items():
+        if extra_precio > 2600:
+            print(f'→ {extra_categorias} - {extra_producto}: {extra_precio}')
