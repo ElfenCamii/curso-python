@@ -67,8 +67,9 @@ while True:
                 if buscar_pruducto.get(user_producto):
                     print(f'El producto tiene un precio de: {buscar_pruducto[user_producto]}')
                     encontrado = True
+                    break
             if not encontrado:
-                print(buscar_pruducto.get(user_producto, 'Producto no encontrado'))
+                print('Producto no encontrado')
     except ValueError:
         print('\nEl valor ingresado no es un número!!')
         print('Vuelve a intestarlo \n')
