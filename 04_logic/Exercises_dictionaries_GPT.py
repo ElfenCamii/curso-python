@@ -191,11 +191,8 @@ print('Portal de profesores')
 dic_estudiantes = {}
 dic_promedios = {}
 
-def promedio(a):
-    promedio = 0
-    for n in a:
-        promedio += n
-    return promedio / 3
+def promedio(lista_notas):
+    return sum(lista_notas) / len(lista_notas)
 
 while True:
     contador = 0
@@ -216,8 +213,9 @@ while True:
 
 print('Los promedios de los estudiantes son: ', dic_promedios)
 
+mayor  = max(dic_promedios.values())
 for nombre, max_promedio in dic_promedios.items():
-    if max_promedio == max(dic_promedios.values()):
+    if max_promedio == mayor:
         print(f'El estudiante con mayor promedio es {nombre} y es de {max_promedio}')
 
     
