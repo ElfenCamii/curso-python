@@ -1,52 +1,41 @@
 import os
 os.system('cls')
 
-# 8️⃣ Diccionario anidado
+# 9️⃣ Conteo de pares usando diccionario
 
-# Crea un sistema tipo agenda:
+# Dada una lista de números:
+# Crea un diccionario con:
 
-# agenda = {
-#     "Camilo": {"telefono": "123", "ciudad": "Bogotá"},
-#     "Ana": {"telefono": "456", "ciudad": "Medellín"}
-# }
+# "pares": cantidad
+# "impares": cantidad
 
-# Permite buscar una persona y mostrar sus datos.
-# Maneja el caso donde no exista.
+# Usando tu función par().
 
-agenda = {
-    "Camilo": {"telefono": "123", "ciudad": "Bogotá"},
-    "Ana": {"telefono": "456", "ciudad": "Yopal"},
-    "Daniella": {"telefono": "890", "ciudad": "Medellín"}
-}
+def par(a):
+    return a % 2 == 0
 
-print('----------------------------------------')
-print('--- Bienvenidos a tu agenda personal ---')
-print('----------------------------------------')
+list_number = [39, 58, 56, 68, 28, 49, 66, 52, 12, 7, 45, 45, 48, 23, 52, 31, 45, 46, 63, 15]
+list_par = []
+list_impar = []
+dict_number = {}
+dict_par = {}
+dict_impar = {}
 
-while True:
-    print('''
-\nEscribe el número de la opción que desees:
-          
-    1. Buscar a una persona
-    2. Salir
-''')
-    
-    try:
-        user = int(input('Que deseas hacer: '))
-        if user == 2:
-            print('--------------------------')
-            print('-------- Gracias! --------')
-            print('--- Hasta la proxima!! ---')
-            print('--------------------------')
-            break
-        elif user == 1:
-            user_persona = input('\nIngrese el nombre de la persona que desea buscar: ').strip().capitalize()
-            print(f'\nIngresaste el nombre de → {user_persona}')
-            if agenda.get(user_persona):
-                for number, city in agenda[user_persona].items():
-                    print(f'{number} : {city}')
-            else:
-                print(agenda.get(user_persona, 'La persona buscada no se encuentra en la agenda'))
-    except ValueError:
-        print('\nEl valor ingresado no es un número')
-        print('Intente nuevamente, gracias!')
+for number in list_number:
+    if par(number):
+        list_par.append(number)
+        
+    else:
+        list_impar.append(number)
+
+total_par = len(list_par)
+total_impar = len(list_impar)
+
+dict_par['lista_pares'] = list_par
+dict_par['total_pares'] = total_par
+dict_impar['lista_impares'] = list_impar
+dict_impar['total_impares'] = total_impar
+
+dict_number['pares'] = dict_par
+dict_number['impares'] = dict_impar
+print(dict_number)
