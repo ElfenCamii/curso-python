@@ -1,49 +1,52 @@
 import os
 os.system('cls')
 
-# 🔴 🧩 NIVEL DIFÍCIL (estructura mental)
+# 8️⃣ Diccionario anidado
 
-# 7️⃣ Diccionario de listas
+# Crea un sistema tipo agenda:
 
-# Crea un diccionario donde:
+# agenda = {
+#     "Camilo": {"telefono": "123", "ciudad": "Bogotá"},
+#     "Ana": {"telefono": "456", "ciudad": "Medellín"}
+# }
 
-# Cada clave sea un nombre de estudiante.
-# Cada valor sea una lista de 3 notas.
+# Permite buscar una persona y mostrar sus datos.
+# Maneja el caso donde no exista.
 
-# Luego:
+agenda = {
+    "Camilo": {"telefono": "123", "ciudad": "Bogotá"},
+    "Ana": {"telefono": "456", "ciudad": "Yopal"},
+    "Daniella": {"telefono": "890", "ciudad": "Medellín"}
+}
 
-# Calcula el promedio de cada estudiante.
-# Determina cuál tiene el promedio más alto.
-
-print('!Bienvenido!')
-print('Portal de profesores')
-
-dic_estudiantes = {}
-dic_promedios = {}
-
-def promedio(lista_notas):
-    return sum(lista_notas) / len(lista_notas)
+print('----------------------------------------')
+print('--- Bienvenidos a tu agenda personal ---')
+print('----------------------------------------')
 
 while True:
-    contador = 0
-    notas = []
-    print('Desea agregar un estudiante?')
-    continuar = input('Escriba si/salir: ').lower()
-    if continuar == 'salir':
-        print('Gracias, nos vemos en la proxima!')
-        break
-    estudiante = input('Escribe el nombre del estudiante: \n')
-    while contador < 3:
-        nota = float(input('Agregue las notas del estudiante: '))
-        notas.append(nota)
-        contador += 1
-    dic_estudiantes[estudiante] = notas
-    dic_promedios[estudiante] = promedio(notas)
-
-
-print('Los promedios de los estudiantes son: ', dic_promedios)
-
-mayor  = max(dic_promedios.values())
-for nombre, max_promedio in dic_promedios.items():
-    if max_promedio == mayor:
-        print(f'El estudiante con mayor promedio es {nombre} y es de {max_promedio}')
+    print('''
+\nEscribe el número de la opción que desees:
+          
+    1. Buscar a una persona
+    2. Salir
+''')
+    
+    try:
+        user = int(input('Que deseas hacer: '))
+        if user == 2:
+            print('--------------------------')
+            print('-------- Gracias! --------')
+            print('--- Hasta la proxima!! ---')
+            print('--------------------------')
+            break
+        elif user == 1:
+            user_persona = input('\nIngrese el nombre de la persona que desea buscar: ').capitalize()
+            print(f'\nIngresaste el nombre de → {user_persona}')
+            if agenda.get(user_persona):
+                for name in agenda[user_persona].keys():
+                    print(f'{name} : {agenda[user_persona]}')
+            else:
+                print(agenda.get(user_persona, 'La persona buscada no se encuentra en la agenda'))
+    except ValueError:
+        print('\nEl valor ingresado no es un número')
+        print('Intente nuevamente, gracias!')
