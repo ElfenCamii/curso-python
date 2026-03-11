@@ -40,11 +40,11 @@ while True:
             print('--------------------------')
             break
         elif user == 1:
-            user_persona = input('\nIngrese el nombre de la persona que desea buscar: ').capitalize()
+            user_persona = input('\nIngrese el nombre de la persona que desea buscar: ').strip().capitalize()
             print(f'\nIngresaste el nombre de → {user_persona}')
             if agenda.get(user_persona):
-                for name in agenda[user_persona].keys():
-                    print(f'{name} : {agenda[user_persona]}')
+                for number, city in agenda[user_persona].items():
+                    print(f'{number} : {city}')
             else:
                 print(agenda.get(user_persona, 'La persona buscada no se encuentra en la agenda'))
     except ValueError:
