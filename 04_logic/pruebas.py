@@ -85,3 +85,47 @@ while True:
     except ValueError:
         print('El valor ingresado no es un número!')
         print('Intentelo de nuevo')
+
+
+###
+# Mejoras a considerar
+###
+
+# 1️⃣ Problema con inventario.get()
+
+# Ahora mismo usas:
+
+# if inventario.get(a):
+
+# Esto funciona solo si la cantidad es mayor que 0.
+# Si algún día tuvieras:
+
+# inventario["arroz"] = 0
+
+# Python interpretaría eso como False.
+# La forma más segura es:
+
+# if a in inventario:
+
+# Ejemplo:
+
+# if a in inventario:
+
+# Esto verifica si la clave existe, no su valor.
+
+
+# 3️⃣ Manejar inventario vacío
+
+# Cuando el inventario está vacío, el programa no dice nada.
+
+# Podrías mejorar esto:
+
+# elif user_action == 3:
+
+# Ejemplo:
+
+# if not inventario:
+#     print("\nEl inventario está vacío")
+# else:
+#     for producto, cantidad in inventario.items():
+#         print(f'    {producto} → {cantidad}')
